@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
+import NumberList from './NumberList.jsx';
 
 
 const rootElement=document.querySelector('#root');
 
-const element=<ul>list</ul>;
-ReactDOM.render(element, rootElement);
+
+const numbers=[1, 2, 3, 4, 5];
+
+ReactDOM.render(<NumberList numbers={numbers}/>, rootElement);
