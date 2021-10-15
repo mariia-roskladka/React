@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import User from './User.jsx';
+import UserForm from './UserForm.jsx';
+import User from './UserForm.jsx';
 
 const rootElement = document.querySelector('#root');
 
-ReactDOM.render(<User userId="facebook" />, rootElement);
+ReactDOM.render(<UserForm />, rootElement);
