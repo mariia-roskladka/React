@@ -1,4 +1,5 @@
 import React from 'react';
+import ShoppingCart from './ShoppingCart';
 
 class ProductsList extends React.Component {
   render() {
