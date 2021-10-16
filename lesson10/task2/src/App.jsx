@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ShoppingCart from './ShoppingCart.jsx';
 import Profile from './Profile.jsx';
 
@@ -19,6 +19,7 @@ class App extends React.Component {
       },
     });
   };
+
   render() {
     const { userData } = this.state;
     return (
