@@ -5,7 +5,7 @@ class EvenNumbers extends Component{
         //
         return nextProps.number % 2 === 0;
     }
-    
+
     render(){
         return(
             <div className="number">

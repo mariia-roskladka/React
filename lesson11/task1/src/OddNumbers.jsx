@@ -5,6 +5,7 @@ class OddNumbers extends Component{
         //
         return nextProps.number % 2 === 1;
     }
+
     render(){
         return(
             <div className="number">
