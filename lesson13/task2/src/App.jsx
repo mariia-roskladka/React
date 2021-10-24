@@ -1,37 +1,27 @@
-import React from 'react';
-import ShoppingCart from './ShoppingCart.jsx';
-import Profile from './Profile.jsx';
+import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Contacts from './Contacts.jsx';
+import Products from './Products.jsx';
+import Home from './Home.jsx';
 
-class App extends React.Component {
-  state = {
-    userData: {
-      firstName: 'Tom',
-      lastName: 'Ford',
-    },
-  };
-
-  handleChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      userData: {
-        ...this.state.userData,
-        [name]: value,
-      },
-    });
-  };
-
-  render() {
-    const { userData } = this.state;
-    return (
-      <div className="page">
-        <h1 className="title">{`Hello, ${userData.firstName} ${userData.lastName}`}</h1>
-        <main className="content">
-          <ShoppingCart userName={userData.firstName} />
-          <Profile userData={userData} handleChange={this.handleChange} />
-        </main>
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div className="page">
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/products">
+            <Products />
+          </Route>
+          <Route path="/contacts">
+            <Contacts />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    </div>
+  );
+};
 
 export default App;
