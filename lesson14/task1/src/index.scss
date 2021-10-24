@@ -1,63 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
 }
 
 #root {
     height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter {
+    margin: auto;
+    display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.page {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-}
-
-.header {
-    display: flex;
-    padding: 8px;
-    background-color: cornsilk;
-    border-bottom: 1px solid #ccc;
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    &__greeting {
-        opacity: 0.5;
-    }
-    &__avatar {
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        margin-left: 16px;
-    }
-}
-
-.user {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    align-items: center;
-    &__avatar {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-    }
-    &__info {
-        text-align: center;
-        font-size: 24px;
-        margin: 32px;
-    }
-    &__name {
+    &__button {
+        width: 48px;
+        height: 48px;
+        border: 2px solid grey;
+        border-radius: 8px;
+        background: transparent;
         font-weight: 700;
+        font-size: 24px;
+        cursor: pointer;
+        outline: none;
     }
-    &__location {
-        opacity: 0.5;
-        margin-left: 16px;
+    &__value {
+        margin: 16px;
     }
 }
