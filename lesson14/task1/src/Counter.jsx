@@ -1,41 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { useState } from 'react';
 
-class Counter extends Component {
-  constructor(props) {
-    super(props);
+const Counter = () => {
+  const [counter, setCounter] = useState(0);
+  return (
+    <div className="counter">
+      <button className="counter__button" onClick={() => setCounter(counter - 1)}>
+        -
+      </button>
+      <span className="counter__value" onClick={() => setCounter(0)}>
+        {counter}
+      </span>
+      <button className="counter__button" onClick={() => setCounter(counter + 1)}>
+        +
+      </button>
+    </div>
+  );
+};
 
-    this.state = {
-      counter: 0,
-    };
-
-    this.decrement = this.decrement.bind(this);
-  }
-
-  increment = () => {
-    this.setState({
-      counter: this.state.counter + 1,
-    });
-  };
-
-  decrement = () => {
-    this.setState({
-      counter: this.state.counter - 1,
-    });
-  };
-
-  reset() {
-    this.setState({
-      counter: 0,
-    });
-  }
-
-  render() {
-    return (
-      <div class="counter">
-        <button class="counter__button">-</button>
-        <span class="counter__value">17</span>
-        <button class="counter__button">+</button>
-      </div>
-    );
-  }
-}
+export default Counter;
